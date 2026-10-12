@@ -1,0 +1,38 @@
+SELECT *
+FROM global_ecommerce_sales;
+
+SELECT SUM(Total_Sales)
+FROM global_ecommerce_sales;
+
+SELECT SUM(Profit)
+FROM global_ecommerce_sales;
+
+SELECT COUNT(Order_ID)
+FROM global_ecommerce_sales; 
+
+SELECT Country, SUM(Total_Sales) AS Total_Revenue
+FROM global_ecommerce_sales
+GROUP BY Country
+ORDER BY Total_Revenue DESC;
+
+SELECT Customer_Segment, SUM(Profit)
+FROM global_ecommerce_sales
+GROUP BY Customer_Segment
+ORDER BY SUM(Profit) DESC; 
+
+SELECT Region, AVG(Profit)
+FROM global_ecommerce_sales
+GROUP BY Region
+ORDER BY AVG(Profit) ASC;
+
+SELECT Payment_Method, COUNT(*) AS Total_orders
+FROM global_ecommerce_sales
+GROUP BY Payment_Method
+ORDER BY Total_Orders DESC; 
+
+SELECT
+    DATE_TRUNC('month', Order_Date) AS Sales_Month,
+    SUM(Total_Sales) AS Total_Revenue
+FROM global_ecommerce_sales
+GROUP BY Sales_Month
+ORDER BY Sales_Month ASC;
