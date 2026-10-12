@@ -5,5 +5,6 @@ The dashboard includes different charts and filters to make it easier to explore
 
 Tools Used: SQL (DuckDB), Tableau, Figma
 
+Tableau Dashboard: https://public.tableau.com/app/profile/hasini.j7924/viz/SQL_17917697453720/Dashboard1
 
 
